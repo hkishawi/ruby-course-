@@ -1,10 +1,10 @@
 
-friends = ["Kevin", "Karen", "Oscar", "Angela", "Andy"]
-
-for index in 0..5
-  puts index
+def pow(base_num, pow_num)
+  result = 1
+  pow_num.times do |index|
+    result = result * base_num
+  end
+  return result
 end
 
-6.times do |index|
-  puts index
-end
+puts pow(2, 3)
