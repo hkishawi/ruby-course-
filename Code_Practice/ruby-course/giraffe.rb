@@ -1,6 +1,14 @@
 
-def cube(num)
-  return num * num * num, 70
-end
 
-puts cube(3)[1]
+
+ismale = false
+istall = false
+if ismale and istall
+  puts "you are tall, male"
+elsif ismale and !istall
+  puts "you are short male"
+elsif !ismale and istall
+  puts "you are !male but tall"
+else
+  puts "x_x"
+end
