@@ -1,8 +1,6 @@
 
-states = {
-  1 => "PA",
-  "New York" => "NY",
-  "Oregon" => "OR"
-}
+def sayhi(name="Brittnay", age = "21")
+  puts ("hello " + name + ". you are " + age.to_s)
+end
 
-puts states[1]
+sayhi("Mike")
