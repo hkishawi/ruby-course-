@@ -1,6 +1,7 @@
 
-puts "Enter your name"
-name = gets.chomp()
-puts "Enter age"
-age = gets.chomp()
-puts ("Hello, " + name + ", you are " + age + "!")
+puts "enter number: "
+num1 = gets.chomp.to_f()
+puts "enter another number"
+num2 = gets.chomp.to_f()
+
+puts (num1 + num2)
