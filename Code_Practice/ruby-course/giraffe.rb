@@ -1,3 +1,8 @@
 
-friends = Array["Kevin", "Mike", "Sharon", "Suzana"]
-puts friends.sort()
+states = {
+  1 => "PA",
+  "New York" => "NY",
+  "Oregon" => "OR"
+}
+
+puts states[1]
