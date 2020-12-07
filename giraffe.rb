@@ -1,10 +1,23 @@
+# File.open("employees.txt", "r") do |file|
+    
+#     for line in file.readlines()
+#         puts line
+#     end
+    
+    # puts file.readline()
+    # puts file.readline()
+    # puts file.readline()
 
-def pow(base_num, pow_num)
-  result = 1
-  pow_num.times do |index|
-    result = result * base_num
-  end
-  return result
-end
+    # puts file.readchar()
+    # puts file.readchar()
+    # puts file.readchar()
+    # puts file.readchar()
+    # puts file.readchar()
 
-puts pow(2, 3)
+# end
+
+file = File.open("employees.txt", "r")
+
+puts file.read
+
+file.close
