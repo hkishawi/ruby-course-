@@ -1,24 +1,34 @@
 
-class Student
-  attr_accessor :name, :major, :gpa
-  def initialize(name, major, gpa)
-    @name = name
-    @major = major
-    @gpa = gpa
-  end 
-
-  def has_honors()
-    if @gpa >= 3.5
-      return true
-    end
-    return false 
+class Question 
+  attr_accessor :prompt, :answer
+  def initialize(prompt, answer)
+    @prompt = prompt
+    @answer = answer
   end
-end 
 
+end
 
+p1 = "What color are apples?\n(a)red\n(b)purple\n(c)green"
+p2 = "What color are bananas?\n(a)pink\n(b)red\n(c)yellow"
+p3 = "What color are pears?\n(a)yellow\n(b)green\n(c)orange"
 
+questions = [
+  Question.new(p1, "a"),
+  Question.new(p2, "c"),
+  Question.new(p3, "b")
+]
 
-student1 = Student.new("Jim", "Business", 2.6)
-student2 = Student.new("Pam", "Art", 3.6)
+def run_test(questions)
+  answer = ""
+  score = 0 
+  for question in questions
+    puts question.prompt 
+    answer = gets.chomp()
+    if answer == question.answer
+      score += 1
+    end
+  end 
+  puts ("You got " + score.to_s + "/" + questions.length.to_s + " correct")
+end
 
-puts student2.has_honors
+run_test(questions)
