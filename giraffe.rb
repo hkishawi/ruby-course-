@@ -1,34 +1,33 @@
 
-class Question 
-  attr_accessor :prompt, :answer
-  def initialize(prompt, answer)
-    @prompt = prompt
-    @answer = answer
+class Chef   #superclass
+  def make_chicken
+    puts "The chef makes chicken"
   end
 
-end
+  def make_salad
+    puts "the chef makes salad"
+  end
 
-p1 = "What color are apples?\n(a)red\n(b)purple\n(c)green"
-p2 = "What color are bananas?\n(a)pink\n(b)red\n(c)yellow"
-p3 = "What color are pears?\n(a)yellow\n(b)green\n(c)orange"
+  def make_special_dish
+    puts "the chef makes bbq rib"
+  end
 
-questions = [
-  Question.new(p1, "a"),
-  Question.new(p2, "c"),
-  Question.new(p3, "b")
-]
+end 
 
-def run_test(questions)
-  answer = ""
-  score = 0 
-  for question in questions
-    puts question.prompt 
-    answer = gets.chomp()
-    if answer == question.answer
-      score += 1
-    end
+class ItalianChef < Chef #italian inherits superclass
+  def make_special_dish
+    puts "the Italian chef makes escargogi"
   end 
-  puts ("You got " + score.to_s + "/" + questions.length.to_s + " correct")
-end
 
-run_test(questions)
+  def make_pasta
+    puts "the Italian chef makes pasta"
+  end 
+end 
+
+
+chef = Chef.new()
+chef.make_chicken
+
+Italian_chef = ItalianChef.new()
+Italian_chef.make_salad
+Italian_chef.make_pasta
