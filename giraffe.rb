@@ -1,8 +1,11 @@
-# File.open("employees.txt", "r") do |file|
-#   file.write("<h1>Hello</h1>")
-# end
+lucky_nums = [4, 8, 15, 16, 23, 42]
 
-File.open("employees.txt", "r+") do |file|
-  file.readchar()
-  file.write("draggonslayer")
+lucky_nums[4]
+
+begin
+  lucky-nums["dog"]
+rescue ZeroDivisionError
+  puts "Division by zero error"
+rescue TypeError => e
+  puts e
 end
