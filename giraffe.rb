@@ -1,23 +1,8 @@
 # File.open("employees.txt", "r") do |file|
-    
-#     for line in file.readlines()
-#         puts line
-#     end
-    
-    # puts file.readline()
-    # puts file.readline()
-    # puts file.readline()
-
-    # puts file.readchar()
-    # puts file.readchar()
-    # puts file.readchar()
-    # puts file.readchar()
-    # puts file.readchar()
-
+#   file.write("<h1>Hello</h1>")
 # end
 
-file = File.open("employees.txt", "r")
-
-puts file.read
-
-file.close
+File.open("employees.txt", "r+") do |file|
+  file.readchar()
+  file.write("draggonslayer")
+end
